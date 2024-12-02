@@ -21,7 +21,8 @@ WORKDIR /app
 # Create a non-privileged user that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 ARG UID=10001
-RUN adduser \
+RUN mkdir -p /nonexistent && \
+    adduser \
     --disabled-password \
     --gecos "" \
     --home "/nonexistent" \
