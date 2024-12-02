@@ -1,0 +1,6 @@
+Run the Application => docker compose up --build
+Stop the Application => ctrl + C
+
+Run the Application in BG => docker compose up --build -d
+Stop the Application => docker compose down
+
