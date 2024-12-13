@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     POSTGRES_SERVER: str
     POSTGRES_PORT: int = 5432
     POSTGRES_USER: str
-    POSTGRES_PASSWORD: str | None 
+    POSTGRES_PASSWORD: str | None = None
     POSTGRES_PASSWORD_FILE: str | None = None
     POSTGRES_DB: str
 
