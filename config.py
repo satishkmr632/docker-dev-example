@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     POSTGRES_SERVER: str
     POSTGRES_PORT: int = 5432
     POSTGRES_USER: str
-    POSTGRES_PASSWORD: str | None = None
+    POSTGRES_PASSWORD: str | None 
     POSTGRES_PASSWORD_FILE: str | None = None
     POSTGRES_DB: str
 
@@ -43,11 +43,11 @@ class Settings(BaseSettings):
     def SQLALCHEMY_DATABASE_URI(self) -> PostgresDsn:
         return MultiHostUrl.build(
             scheme="postgresql+psycopg",
-            username=self.POSTGRES_USER,
-            password=self.POSTGRES_PASSWORD if self.POSTGRES_PASSWORD else self.POSTGRES_PASSWORD_FILE,
-            host=self.POSTGRES_SERVER,
-            port=self.POSTGRES_PORT,
-            path=self.POSTGRES_DB,
+            username='postgres',
+            password='mysecretpassword'
+            host='db',
+            port=5432,
+            path='example',
         )
 
 settings = Settings()
