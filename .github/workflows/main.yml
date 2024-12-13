@@ -20,4 +20,4 @@ jobs:
         with:
           platforms: linux/amd64
           push: true
-          tags: satishkmr632/docker-dev-example:latest
+          tags: ${{ github.event.repository.name }}:latest
