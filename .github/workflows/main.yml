@@ -20,4 +20,4 @@ jobs:
         with:
           platforms: linux/amd64
           push: true
-          tags: docker-dev-example:latest
+          tags: satishkmr632/docker-dev-example:latest
