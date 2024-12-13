@@ -18,6 +18,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          platforms: linux/amd64
+          platforms: linux/arm64
           push: true
-          tags: python-docker-dev-example-server:latest
+          tags: stsdev46/python-docker-dev-example:latest
