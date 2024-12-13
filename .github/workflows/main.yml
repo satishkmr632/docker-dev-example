@@ -20,4 +20,4 @@ jobs:
         with:
           platforms: linux/amd64
           push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/python-docker-dev-example-server:latest
+          tags: docker-dev-example:latest
